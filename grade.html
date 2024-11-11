@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Grade</title>
+    <style>
+        body {
+            background: lightblue;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #e6f7ff;
+            padding: 40px;
+            border: 3px solid #000;
+            box-shadow: 3px 2px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 100px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3399ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #287abf;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            input[type="number"] {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>My Grade</h2>
+        <input type="number" id="grade" placeholder="Enter grade">
+        <br><br>
+        <button type="button" onclick="displayGrade()">Click me to display your grade</button>
+    </div>
+
+    <script>
+        function displayGrade() {
+            var value = document.getElementById('grade').value;
+
+            if (value >= 70) {
+                alert("Passed ka parr!!!");
+            } else {
+                alert("Failed ka tol :((");
+            }
+        }
+    </script>
+
+</body>
+</html>
